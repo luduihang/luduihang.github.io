@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/2025/06/23/2025-06-24/</loc>
+    
+    <lastmod>2025-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/about/index.html</loc>
     
     <lastmod>2025-06-23</lastmod>
@@ -110,6 +119,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://example.com/tags/%E6%8A%95%E8%B5%84/</loc>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -134,21 +150,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%95%85%E4%BA%8B/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2025-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/%E6%95%85%E4%BA%8B/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2025-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E7%A7%81%E5%AF%86/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2025-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
