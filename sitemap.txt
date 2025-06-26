@@ -8,8 +8,8 @@ http://example.com/2025/06/22/2025-06-22/
 http://example.com/2025/06/21/2025-06-21/
 http://example.com/2025/06/19/2025-06-19/
 http://example.com/
-http://example.com/tags/%E6%80%9D%E8%BE%A8/
 http://example.com/tags/%E6%84%9F%E6%82%9F/
+http://example.com/tags/%E6%80%9D%E8%BE%A8/
 http://example.com/tags/%E4%BA%BA%E7%94%9F/
 http://example.com/tags/%E8%A1%A8%E7%99%BD/
 http://example.com/tags/%E6%8A%95%E8%B5%84/
