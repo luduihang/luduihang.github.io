@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>http://example.com/categories/index.html</loc>
     
     <lastmod>2025-06-26</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>http://example.com/about/index.html</loc>
     
     <lastmod>2025-06-26</lastmod>
     
@@ -137,14 +137,14 @@
 
   
   <url>
-    <loc>http://example.com/tags/%E6%80%9D%E8%BE%A8/</loc>
+    <loc>http://example.com/tags/%E6%84%9F%E6%82%9F/</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%84%9F%E6%82%9F/</loc>
+    <loc>http://example.com/tags/%E6%80%9D%E8%BE%A8/</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
