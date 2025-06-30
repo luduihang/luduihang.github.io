@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2f09ff;
+  background: #ff66e2;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2362,10 +2362,29 @@ embed {
   padding: 1px 4px;
 }
 .sub-menu {
-  margin: 10px 0;
+  margin: 100px 0;
+  font-size: 1.2em;
 }
 .sub-menu .menu-item {
   display: inline-block;
+}
+.sub-menu .menu-item .fa,
+.sub-menu .menu-item .fas,
+.sub-menu .menu-item .far,
+.sub-menu .menu-item .fab {
+  vertical-align: 5px;
+}
+.sub-menu .menu-item .fa,
+.sub-menu .menu-item .fas,
+.sub-menu .menu-item .far,
+.sub-menu .menu-item .fab {
+  transition: all 0.3s;
+}
+.sub-menu .menu-item .fa:hover,
+.sub-menu .menu-item .fas:hover,
+.sub-menu .menu-item .far:hover,
+.sub-menu .menu-item .fab:hover {
+  transform: scale(1.4);
 }
 .sidebar {
   left: -320px;
@@ -2406,6 +2425,35 @@ embed {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.readings .menu-item {
+  position: relative;
+}
+.readings .menu-item .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background: var(--content-bg-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 4px;
+}
+.readings .menu-item .sub-menu .menu-item {
+  padding: 8px 15px;
+  margin: 0;
+}
+.readings .menu-item .sub-menu .menu-item:hover {
+  background: var(--btn-hover-color);
+}
+.readings .menu-item .sub-menu .menu-item a {
+  display: block;
+  white-space: nowrap;
+}
+.readings .menu-item:hover .sub-menu {
+  display: block;
+}
+/* ==================== 顶置菜单动画效果 ==================== */
 .header {
   position: fixed;
   top: 0;
@@ -2506,6 +2554,24 @@ embed {
 .header.scroll-down ~ .main {
   padding-top: 80px;
 }
+body .category-all-page .category-list-item {
+  position: relative;
+}
+body .category-all-page .category-list-item .category-list-count {
+  background: rgba(0,210,211,0.1) !important;
+  color: #00d2d3 !important;
+  display: inline-block;
+  font-size: 0.8em;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+body .category-all-page .category-list-item .category-list-count:hover {
+  background: rgba(0,210,211,0.2) !important;
+}
 .category-all-page .category-all-title {
   font-size: 24px;
   font-weight: 600;
@@ -2548,7 +2614,7 @@ embed {
   color: #1890ff;
 }
 .category-all-page .category-all .category-list .category-list-item .category-list-child {
-  margin-top: 10px;
+  margin-top: 50px;
   padding-left: 20px;
   list-style: none;
   border-left: 2px solid #f0f0f0;
@@ -2565,6 +2631,234 @@ embed {
   color: #1890ff;
 }
 .category-all-page .category-all .category-list .category-list-item .category-list-child .category-list-item .category-list-link {
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 400;
+}
+/* ==================== 分类页面专属美化 ==================== */
+.category-all-title {
+  line-height: 0.8 !important;
+}
+.category-all-title .category-heading {
+  margin-bottom: 5px !important;
+}
+.category-all-title .category-count {
+  margin-top: 5px !important;
+}
+.category-all-page {
+  padding: 40px 0;
+/* ========== 为不同分类添加特色样式 ========== */
+}
+.category-all-page .category-all-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #272727;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.category-all-page .category-all-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, #00d2d3);
+  margin: 15px auto 0;
+}
+.category-all-page .category-all {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.category-all-page .category-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+.category-all-page .category-list .category-list-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 25px;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid transparent;
+}
+.category-all-page .category-list .category-list-item .category-list-link {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.category-all-page .category-list .category-list-item .category-list-link::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.category-all-page .category-list .category-list-item .category-list-count {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background: #f8f9fa;
+  color: #666;
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.category-all-page .category-list .category-list-item .category-list-count::before {
+  content: '共';
+}
+.category-all-page .category-list .category-list-item .category-list-count::after {
+  content: '篇';
+}
+.category-all-page .category-list .category-list-item .category-list-child {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #eee;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item .category-list-link {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item .category-list-link:hover {
+  color: #1890ff;
+}
+.category-all-page .category-list .category-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.category-all-page .category-list-item:has(a[href*="思维书架"]) {
+  border-top-color: #ff6b6b;
+}
+.category-all-page .category-list-item:has(a[href*="思维书架"]) .category-list-count {
+  background: rgba(255,107,107,0.1);
+  color: #ff6b6b;
+}
+.category-all-page .category-list-item:has(a[href*="表白墙"]) {
+  border-top-color: #ff9ff3;
+}
+.category-all-page .category-list-item:has(a[href*="表白墙"]) .category-list-count {
+  background: rgba(255,159,243,0.1);
+  color: #ff9ff3;
+}
+.category-all-page .category-list-item:has(a[href*="轻松特饮"]) {
+  border-top-color: #00d2d3;
+}
+.category-all-page .category-list-item:has(a[href*="轻松特饮"]) .category-list-count {
+  background: rgba(0,210,211,0.1);
+  color: #00d2d3;
+}
+/* ==================== 响应式调整 ==================== */
+@media (max-width: 767px) {
+  .category-all-page .category-list {
+    grid-template-columns: 1fr;
+  }
+  .category-all-page .category-list .category-list-item {
+    padding: 20px;
+  }
+  .category-all-page .category-list .category-list-item .category-list-link {
+    font-size: 1.2rem;
+  }
+}
+/* ==================== archive 文章样式修改 ==================== */
+/* 时间线样式 */
+.archive-year {
+  font-size: 1.5em;
+  margin: 30px 0 10px;
+  position: relative;
+}
+.archive-year:before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: #2196f3;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.archive-post {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+.archive-post:before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 15px;
+  width: 6px;
+  height: 6px;
+  background: #999;
+  border-radius: 50%;
+}
+.archive-post time {
+  color: #666;
+  font-size: 0.9em;
+}
+.archive-post a {
+  color: #333;
+}
+.archive-post a:hover {
+  color: #2196f3;
+}
+@-moz-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -15,22 +15,25 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+
+
+
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":false,"storage":false,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+    var CONFIG = {"hostname":"kipleytaylor11.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":false,"storage":false,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="欢迎来到我的树洞^-^">
 <meta property="og:type" content="website">
 <meta property="og:title" content="夜航手记">
-<meta property="og:url" content="http://example.com/archives/2025/06/index.html">
+<meta property="og:url" content="http://kipleytaylor11.top/archives/2025/06/index.html">
 <meta property="og:site_name" content="夜航手记">
 <meta property="og:description" content="欢迎来到我的树洞^-^">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Loaden Hang">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2025/06/">
+<link rel="canonical" href="http://kipleytaylor11.top/archives/2025/06/">
 
 
 <script id="page-configurations">
@@ -150,9 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
         
             
-  <li class="menu-item menu-item-菜单">
+  <li class="menu-item menu-item-readings">
 
-    <a href="/essay/" rel="section"><i class="fa fa-icons fa-fw"></i>菜单</a>
+    <a href="/readings/" rel="section"><i class="fa fa-icons fa-fw"></i>readings</a>
 
   </li>
 
@@ -223,11 +226,81 @@ document.addEventListener('DOMContentLoaded', function() {
   
   
   <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..!  继续努力。</span>
-      </div>
+    <style>
+      /* 新增时间线样式 */
+      .posts-collapse {
+        position: relative;
+        padding-left: 15px;
+      }
+      .posts-collapse::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 20px;
+        left: 0;
+        width: 4px;
+        background: rgb(255, 255, 255)
+        border-radius: 5x;
+      }
+      .collection-title {
+        background: linear-gradient(135deg, #f5f7fa 0%,rgb(245, 245, 245) 100%);
+        padding: 15px 25px;
+        border-radius: 0px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .collection-header {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        display: inline-block;
+        position: relative;
+      }
+      .post-collapse .post-header {
+        position: relative;
+        padding: 15px 0;
+        transition: all 0.3s ease;
+      }
+      .post-collapse .post-title {
+        font-size: 1.1em;
+        margin-left: 10px;
+        position: relative;
+      }
+      .post-collapse .post-title a {
+        color: #34495e;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      .post-collapse .post-title a:hover::after {
+        width: 100%;
+      }
+      .post-collapse .post-meta {
+        margin-left: 10px;
+        font-size: 0.9em;
+        color: #7f8c8d;
+      }
+      .post-collapse .post-meta time {
+        background: #f8f9fa;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-right: 5px;
+      }
+      @media (max-width: 767px) {
+        .posts-collapse {
+          padding-left: 20px;
+        }
+        .posts-collapse::before {
+          left: -2px;
+        }
+        .post-collapse .post-header::before {
+          left: -23px;
+        }
+      }
+    </style>
 
+    <div class="posts-collapse">
+      <div class="collection-title animated fadeInDown">
+      <span class="collection-header" style="list-style: none; padding-left: 0;"> 笔尖下流淌的一段段文字，书写着时间的故事~~~</span>
       
     <div class="collection-year">
       <span class="collection-header">2025</span>
@@ -432,6 +505,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     </header>
   </article>
+
+      </div>
 
 
     </div>

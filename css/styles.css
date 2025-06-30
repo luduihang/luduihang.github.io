@@ -1,162 +1,145 @@
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(255,255,255,0);
-  box-shadow: none;
-  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
-.header.scroll-down {
-  background: rgba(255,255,255,0.98);
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-  height: 60px;
-}
-.header.scroll-down .site-meta {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  margin: 0;
-  transform: translateY(-10px);
-}
-.header.scroll-down .menu {
-  transform: translateY(-30px);
-}
-.header .header-inner {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 40px;
-  transition: all 0.4s ease;
-}
-.header .site-meta {
-  display: flex;
-  flex-direction: column;
-  transition: all 0.4s ease;
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-}
-.header .site-meta .site-title {
-  font-size: 28px !important;
-  font-weight: 600;
-  color: #fff !important;
-  letter-spacing: 1px;
-  transition: all 0.4s ease;
-}
-.header .site-meta .site-subtitle {
-  font-size: 14px;
-  color: #666 !important;
-  margin-top: 2px;
-  transition: all 0.4s ease;
-}
-.header .menu {
-  display: flex;
-  transition: all 0.4s ease;
-}
-.header .menu .menu-item {
-  margin: 0 12px;
-  position: relative;
-}
-.header .menu .menu-item a {
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-.header .menu .menu-item a:hover {
-  color: #1890ff;
-  background: rgba(24,144,255,0.1);
-}
-.header .menu .menu-item.active a {
-  color: #1890ff;
-  font-weight: 600;
-}
-.header .menu .menu-item.active a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 2px;
-  background: #1890ff;
-}
-.main {
-  margin-top: 0;
-  padding-top: 140px;
-}
-.header.scroll-down ~ .main {
-  padding-top: 80px;
+/* ==================== 分类页面专属美化 ==================== */
+.category-all-page {
+  padding: 40px 0;
+/* ========== 为不同分类添加特色样式 ========== */
 }
 .category-all-page .category-all-title {
-  font-size: 24px;
+  font-size: 2.2rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+.category-all-page .category-all-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, #00d2d3);
+  margin: 15px auto 0;
 }
 .category-all-page .category-all {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.category-all-page .category-all .category-list-count {
-  margin-left: 8px;
-  font-size: 14px;
-  color: #999;
+.category-all-page .category-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
 }
-.category-all-page .category-all .category-list-count:before {
-  content: "(";
-}
-.category-all-page .category-all .category-list-count:after {
-  content: ")";
-}
-.category-all-page .category-all .category-list {
-  padding: 0;
-  list-style: none;
-}
-.category-all-page .category-all .category-list .category-list-item {
-  margin-bottom: 20px;
-}
-.category-all-page .category-all .category-list .category-list-item .category-list-link {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.category-all-page .category-all .category-list .category-list-item .category-list-link:hover {
-  color: #1890ff;
-}
-.category-all-page .category-all .category-list .category-list-item .category-list-child {
-  margin-top: 10px;
-  padding-left: 20px;
-  list-style: none;
-  border-left: 2px solid #f0f0f0;
-}
-.category-all-page .category-all .category-list .category-list-item .category-list-child .category-list-item {
-  margin-bottom: 10px;
+.category-all-page .category-list .category-list-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 25px;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
   position: relative;
-  padding-left: 15px;
+  overflow: hidden;
+  border-top: 3px solid transparent;
 }
-.category-all-page .category-all .category-list .category-list-item .category-list-child .category-list-item:before {
-  content: "•";
+.category-all-page .category-list .category-list-item .category-list-link {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.category-all-page .category-list .category-list-item .category-list-link::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.category-all-page .category-list .category-list-item .category-list-count {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background: #f8f9fa;
+  color: #666;
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.category-all-page .category-list .category-list-item .category-list-count::before {
+  content: '共';
+}
+.category-all-page .category-list .category-list-item .category-list-count::after {
+  content: '篇';
+}
+.category-all-page .category-list .category-list-item .category-list-child {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #eee;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item::before {
+  content: '→';
   position: absolute;
   left: 0;
+  color: #999;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item .category-list-link {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+.category-all-page .category-list .category-list-item .category-list-child .category-list-item .category-list-link:hover {
   color: #1890ff;
 }
-.category-all-page .category-all .category-list .category-list-item .category-list-child .category-list-item .category-list-link {
-  font-size: 15px;
-  font-weight: 400;
+.category-all-page .category-list .category-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.category-all-page .category-list-item:has(a[href*="思维书架"]) {
+  border-top-color: #ff6b6b;
+}
+.category-all-page .category-list-item:has(a[href*="思维书架"]) .category-list-link::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff6b6b'%3E%3Cpath d='M3 18h18v2H3zm18-4H3v2h18zm0-4H3v2h18zM3 6h18v2H3zm0 4h18v2H3z'/%3E%3C/svg%3E");
+}
+.category-all-page .category-list-item:has(a[href*="思维书架"]) .category-list-count {
+  background: rgba(255,107,107,0.1);
+  color: #ff6b6b;
+}
+.category-all-page .category-list-item:has(a[href*="表白墙"]) {
+  border-top-color: #ff9ff3;
+}
+.category-all-page .category-list-item:has(a[href*="表白墙"]) .category-list-link::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff9ff3'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+}
+.category-all-page .category-list-item:has(a[href*="表白墙"]) .category-list-count {
+  background: rgba(255,159,243,0.1);
+  color: #ff9ff3;
+}
+.category-all-page .category-list-item:has(a[href*="轻松特饮"]) {
+  border-top-color: #00d2d3;
+}
+.category-all-page .category-list-item:has(a[href*="轻松特饮"]) .category-list-link::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300d2d3'%3E%3Cpath d='M20 3H4v10c0 2.21 3.58 4 8 4s8-1.79 8-4V3zm-2 10c0 1.1-2.69 2-6 2s-6-.9-6-2V5h12v8z'/%3E%3C/svg%3E");
+}
+.category-all-page .category-list-item:has(a[href*="轻松特饮"]) .category-list-count {
+  background: rgba(0,210,211,0.1);
+  color: #00d2d3;
+}
+/* ==================== 响应式调整 ==================== */
+@media (max-width: 767px) {
+  .category-all-page .category-list {
+    grid-template-columns: 1fr;
+  }
+  .category-all-page .category-list .category-list-item {
+    padding: 20px;
+  }
+  .category-all-page .category-list .category-list-item .category-list-link {
+    font-size: 1.2rem;
+  }
 }
