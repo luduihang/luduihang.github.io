@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4616ff;
+  background: #30f0dd;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2821,6 +2821,10 @@ body .category-all-page .category-list-item .category-list-count:hover {
 }
 .archive-post a:hover {
   color: #2196f3;
+}
+/* ==================== 二级目录 文章样式修改 ==================== */
+.submenu-item {
+  margin-left: 10%;
 }
 @-moz-keyframes fadeInUp {
   from {
