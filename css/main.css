@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #30f0dd;
+  background: #73d703;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2822,9 +2822,50 @@ body .category-all-page .category-list-item .category-list-count:hover {
 .archive-post a:hover {
   color: #2196f3;
 }
-/* ==================== 二级目录 文章样式修改 ==================== */
-.submenu-item {
-  margin-left: 10%;
+/* ==================== readings目录 文章样式修改 ==================== */
+.readings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.readings-container .readings-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff1919; /* 深灰色 */
+}
+.readings-container .readings-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+.readings-container .readings-submenu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.readings-container .readings-submenu .submenu-item {
+  margin: 0 15px;
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.readings-container .readings-submenu .submenu-item:hover {
+  background: #eaeaea;
+  text-decoration: none;
+}
+/* 密码输入框美化 */
+#hexo-blog-encrypt .hbe-input-container input {
+  background: #fff;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: #f00;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+#hexo-blog-encrypt .hbe-input-container input:focus {
+  border-color: #4dabf7;
+  box-shadow: 0 0 0 3px rgba(77,171,247,0.25);
 }
 @-moz-keyframes fadeInUp {
   from {
