@@ -136,7 +136,7 @@
 	background: transparent;
 	padding: 0.5em;
 	margin-bottom: 2em;
-	color: #333 !important; /* 强制覆盖为深色 */
+	color: #333; /* 强制覆盖为深色 */
 	z-index: 100;
 	opacity: 0;
 }
